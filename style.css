@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f4f0;
+    color: #0f0f0f;
+  }
+  
+  header {
+    background: #0f0f0f;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #d6cbbf;
+  }
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    color: #0f0f0f;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0.75rem 0;
+  }
+  
+  /* Tech Tags */
+  .tags {
+    margin-bottom: 1rem;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #a6aaa0;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+    margin: 0 0.25rem 0.25rem 0;
+  }
+  
+  /* Button */
+  .btn {
+    display: inline-block;
+    background: #9a6e5f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #7c564a;
+  }
+  
+  #contact {
+    padding: 2rem;
+    background: #f5f4f0;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .contact-info a {
+    color: #9a6e5f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+/* About section with photo */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d6cbbf;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Stack on small screens */
+@media (max-width: 640px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Reveal on scroll base */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When in view */
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Direction helpers (optional) */
+.reveal-up    { transform: translateY(24px); }
+.reveal-down  { transform: translateY(-24px); }
+.reveal-left  { transform: translateX(24px); }
+.reveal-right { transform: translateX(-24px); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* Badges */
+.badge {
+  display: inline-block;
+  background: #a6aaa0;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  margin-left: 0.4rem;
+}
+
+.badge-leadership { background: #6b8e23; }
+.badge-award { background: #3b82f6; }
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 16px;
+  }
+  .timeline-dot {
+    top: 8px;
+  }
+}
+
+/* Resume section */
+.resume-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.resume-preview summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.resume-embed {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+
+.level-advanced { background: #3b82f6; }
+.level-intermediate { background: #6b8e23; }
+.level-beginner { background: #9a6e5f; }
