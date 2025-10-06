@@ -28,6 +28,7 @@ footer {
   padding: 1rem;
   background: #d6cbbf;
 }
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
@@ -77,6 +78,15 @@ footer {
   margin: 0 0.25rem 0.25rem 0;
 }
 
+/* Project buttons container */
+.project-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 /* Button */
 .btn {
   display: inline-block;
@@ -90,6 +100,59 @@ footer {
 
 .btn:hover {
   background: #7c564a;
+}
+
+/* Project image dropdown */
+.project-images {
+  flex: 0 0 auto;
+}
+
+.project-images summary {
+  cursor: pointer;
+  display: inline-block;
+  background: #9a6e5f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  list-style: none;
+  user-select: none;
+}
+
+.project-images summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-images summary:hover {
+  background: #7c564a;
+}
+
+/* Images container - appears below buttons */
+.project-images[open] {
+  flex: 1 1 100%;
+  order: 10;
+}
+
+.images-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.images-container img {
+  width: 100%;
+  max-width: 2px;
+  max-height: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
 }
 
 #contact {
@@ -115,47 +178,51 @@ footer {
 
 /* About section with photo */
 .about-content {
-display: flex;
-align-items: center;
-gap: 1.5rem;
-max-width: 900px;
-margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-photo {
-flex: 0 0 auto;
-width: 200px;
-height: 200px;
-object-fit: cover;
-border-radius: 50%;
-border: 3px solid #d6cbbf;
-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d6cbbf;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* Stack on small screens */
 @media (max-width: 640px) {
-.about-content {
-  flex-direction: column;
-  text-align: center;
-}
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.about-photo {
-  width: 160px;
-  height: 160px;
-}
+  .about-photo {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .images-container img {
+    max-height: 250px;
+  }
 }
 
 /* Reveal on scroll base */
 .reveal {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* When in view */
 .reveal.in-view {
-opacity: 1;
-transform: none;
+  opacity: 1;
+  transform: none;
 }
 
 /* Direction helpers (optional) */
@@ -166,24 +233,23 @@ transform: none;
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-.reveal,
-.reveal.in-view {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
+  .reveal,
+  .reveal.in-view {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
-}
-
 
 /* Badges */
 .badge {
-display: inline-block;
-background: #a6aaa0;
-color: #fff;
-font-size: 0.75rem;
-border-radius: 6px;
-padding: 0.15rem 0.5rem;
-margin-left: 0.4rem;
+  display: inline-block;
+  background: #a6aaa0;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  margin-left: 0.4rem;
 }
 
 .badge-leadership { background: #6b8e23; }
@@ -191,35 +257,34 @@ margin-left: 0.4rem;
 
 /* Mobile tweaks */
 @media (max-width: 640px) {
-.timeline {
-  padding-left: 16px;
-}
-.timeline-dot {
-  top: 8px;
-}
+  .timeline {
+    padding-left: 16px;
+  }
+  .timeline-dot {
+    top: 8px;
+  }
 }
 
 /* Resume section */
 .resume-actions {
-display: flex;
-gap: 0.75rem;
-margin: 0.75rem 0 1rem 0;
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem 0;
 }
 
 .resume-preview summary {
-cursor: pointer;
-font-weight: bold;
-margin: 0.5rem 0 0.75rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0.5rem 0 0.75rem 0;
 }
 
 .resume-embed {
-border: 1px solid #ddd;
-border-radius: 10px;
-background: #fff;
-overflow: hidden;
-box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-
 
 .level-advanced { background: #3b82f6; }
 .level-intermediate { background: #6b8e23; }
