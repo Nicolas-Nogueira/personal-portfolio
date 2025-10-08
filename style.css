@@ -89,7 +89,6 @@ footer {
 
 /* Button */
 .btn {
-  display: inline-block;
   background: #9a6e5f;
   color: white;
   padding: 0.5rem 1rem;
@@ -102,57 +101,28 @@ footer {
   background: #7c564a;
 }
 
-/* Project image dropdown */
-.project-images {
-  flex: 0 0 auto;
-}
-
-.project-images summary {
-  cursor: pointer;
-  display: inline-block;
-  background: #9a6e5f;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s ease;
-  list-style: none;
-  user-select: none;
-}
-
-.project-images summary::-webkit-details-marker {
-  display: none;
-}
-
-.project-images summary:hover {
-  background: #7c564a;
-}
-
-/* Images container - appears below buttons */
-.project-images[open] {
-  flex: 1 1 100%;
-  order: 10;
-}
-
+/* Project images */
 .images-container {
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   background: #f9f9f9;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  text-align: center;
+  border: 1px solid #eee;
+  width: 100%;
 }
 
 .images-container img {
-  width: 100%;
-  max-width: 2px;
-  max-height: 100px;
+  max-width: 100%;
   height: auto;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: block;
-  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
 #contact {
@@ -279,7 +249,42 @@ footer {
 .resume-embed {
   border: 1px solid #ddd;
   border-radius: 10px;
-  background: #fff;
+  ba  .btn {
+    background: #9a6e5f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #7c564a;
+  }
+  
+  /* Project images */
+  .images-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    width: 100%;
+  }
+  
+  .images-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .project-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }ckground: #fff;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
