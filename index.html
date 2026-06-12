@@ -3,218 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nick Nogueira | Portfolio</title>
+  <meta name="description" content="Nick Nogueira — Computer Science student at Stonehill College. Data analytics, machine learning, and software engineering.">
+  <title>Nick Nogueira</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ── HEADER ──────────────────────────────────────────── -->
   <header>
-    <h1>Nick Nogueira</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#coursework">Coursework</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact Me</a>
-    </nav>
+    <div class="header-inner">
+      <span class="header-name">Nick Nogueira</span>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav>
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#coursework">coursework</a>
+        <a href="#resume">resume</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="about" class="reveal reveal-left">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <img
-          src="images/headshot 2028.jpg"
-          alt="Portrait of Nick Nogueira"
-          class="about-photo"
-          width="240"
-          height="240"
-          loading="lazy"
-        />
-        <p>Hi, I’m <strong>Nick Nogueira</strong>, a junior at <strong>Stonehill College</strong> pursuing a
-          <strong>B.S. in Computer Science</strong> with minors in Business Administration and Data Analytics. 
-          As a first-generation college student and proud recipient of the <strong>Hispanic Scholarship Fund</strong>, 
-          <strong>Ronald E. Burton Scholarship</strong>, and the <strong>Yawkey Endowed Scholarship</strong>, 
-          I’m motivated to combine technology, leadership, and service to create meaningful impact.</p>
+
+    <!-- ── ABOUT ────────────────────────────────────────── -->
+    <section id="about" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">about</p>
+        <div class="about-grid">
+          <img
+            src="images/headshot 2028.jpg"
+            alt="Portrait of Nick Nogueira"
+            class="about-photo"
+            width="180"
+            height="180"
+            loading="eager"
+          />
+          <div class="about-text">
+            <p>
+              I'm <strong>Nick Nogueira</strong>, a junior at <strong>Stonehill College</strong>
+              pursuing a <strong>B.S. in Computer Science</strong> with minors in
+              Business Administration and Data Analytics.
+            </p>
+            <p>
+              My work sits at the intersection of data, systems, and decision-making —
+              from machine learning models that predict soccer outcomes to simulations
+              that stress-test card-counting strategies. I like problems where the
+              math and the real world have to talk to each other.
+            </p>
+            <p>
+              First-generation college student. Proud recipient of the
+              <strong>Hispanic Scholarship Fund</strong>, <strong>Ronald E. Burton Scholarship</strong>,
+              and the <strong>Yawkey Endowed Scholarship</strong>.
+            </p>
+            <div class="about-badges">
+              <span class="badge">Computer Science</span>
+              <span class="badge">Data Analytics</span>
+              <span class="badge">Business Administration</span>
+              <span class="badge">Stonehill College '26</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="coursework" class="reveal reveal-up">
-      <h2>Relevant Coursework</h2>
-      <h3>Computer Science and Data Analytics </h3>
-      <ul>
-        <li>Intro to Programming</li>
-        <li>Computer Science I & II</li>
-        <li>Introduction to Data Analytics</li>
-        <li>Introduction to Data Science</li>
-        <li>Introduction to Data Science</li>
-        <li>Introduction to Data Analytics</li>
-        <li>Data Structures</li>
-        <li>Discrete Math  I & II</li>
-        <li>Calculus I & II</li>
-        <li>Artificial Intelligence</li>
-        <li>Statistics for Science</li>
-        <li>Data Visualization</li>
-        <li>Web Programming</li>
-        <li>Topics in Computer Science: Compilers and Theory of Computation</li>
-        <li>Machine Learning</li>
-        <li>Operating Systems</li>
-        <li>Database Management Systems</li>
-        <li>Sport Analytics</li>
-
-      </ul>
-      <h3>Business Administration </h3>
-      <ul>
-        <li>Organizational Behavior</li>
-        <li>Marketing Principles</li>
-        <li>Financial Accounting</li>
-        <li>Managerial Accounting</li>
-        <li>Corporate Accounting</li>
-      </ul>
+    <!-- ── EXPERIENCE ───────────────────────────────────── -->
+    <section id="experience" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">experience</p>
+        <h2 class="section-title">Work & Leadership</h2>
+        <!--
+          Content is injected here by script.js reading data/experience.js
+          To add a role: open data/experience.js and add an object to the array
+        -->
+        <div class="experience-list" id="experience-list"></div>
+      </div>
     </section>
 
-      <!-- Projects Section -->
-<section id="projects" class="reveal reveal-up">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    
-    <!-- Project 1: Counting Blackjack -->
-    <div class="project-card">
-      <h3>Counting Blackjack</h3>
-      <p>A Python program that simulates blackjack strategies and card counting systems.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">Algorithms and Decision Tree</span>
-        <span class="tag">Simulation</span>
+    <!-- ── PROJECTS ─────────────────────────────────────── -->
+    <section id="projects" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">projects</p>
+        <h2 class="section-title">Selected Work</h2>
+        <!--
+          Content is injected here by script.js reading data/projects.js
+          To add a project: open data/projects.js and add an object to the array
+        -->
+        <div class="projects-list" id="projects-list"></div>
       </div>
+    </section>
 
-      <details class="project-images-dropdown">
-        <summary class="images-toggle-btn">View Project Screenshots</summary>
-        <div class="images-container">
-          <img src="images/bankroll-counting-agent-vs-random-agent.png" alt="bankroll-counting-agent-vs-random-agent" loading="lazy">
-          <img src="images/counting-bj-successful-graph-2.png" alt="counting-bj-successful-graph" loading="lazy">
-          <img src="images/card-counting-working-graph.png" alt="card-counting-working-graph" loading="lazy">
+    <!-- ── COURSEWORK ───────────────────────────────────── -->
+    <section id="coursework" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">coursework</p>
+        <h2 class="section-title">Relevant Coursework</h2>
+        <!--
+          Content is injected here by script.js reading data/coursework.js
+          To add a course: open data/coursework.js and add to the right category
+        -->
+        <div class="coursework-grid" id="coursework-grid"></div>
+      </div>
+    </section>
+
+    <!-- ── RESUME ───────────────────────────────────────── -->
+    <section id="resume" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">resume</p>
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="images/HandShake_Nick_Nogueira_Resume (3).pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+          <a class="btn" href="images/HandShake_Nick_Nogueira_Resume (3).pdf" download>Download ↓</a>
         </div>
-      </details>
-
-      <div class="project-buttons">
-        <a href="https://github.com/Nicolas-Nogueira/Counting-BJ" target="_blank" class="btn">View Repo</a>
+        <details class="resume-preview">
+          <summary>Preview on page</summary>
+          <div class="resume-embed">
+            <object
+              data="images/HandShake_Nick_Nogueira_Resume (3).pdf"
+              type="application/pdf"
+              width="100%"
+              height="800"
+            >
+              <p style="padding: 1rem; color: var(--text-secondary); font-size: 14px;">
+                Your browser can't display PDFs inline.
+                <a href="images/HandShake_Nick_Nogueira_Resume (3).pdf" target="_blank" rel="noopener" style="color: var(--accent);">Open the PDF ↗</a>
+              </p>
+            </object>
+          </div>
+        </details>
       </div>
-    </div>
+    </section>
 
-    <!-- Project 2: Predicting Premier League Table -->
-    <div class="project-card">
-      <h3>Predicting Premier League Table 2024–2025</h3>
-      <p>A machine learning project predicting England league outcomes using Python and data analysis.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Soccer Analytics</span>
-      </div>
-
-      <details class="project-images-dropdown">
-        <summary class="images-toggle-btn">View Project Screenshots</summary>
-        <div class="images-container">
-          <img src="images/pred-vs-actual-2024-25.png" alt="pred-vs-actual-2024-25" loading="lazy">
-          <img src="images/trends-of-pts-mp-winners-overtime.png" alt="trends-of-pts-mp-winners-overtime" loading="lazy">
+    <!-- ── CONTACT ──────────────────────────────────────── -->
+    <section id="contact" class="reveal">
+      <div class="container">
+        <p class="section-eyebrow">contact</p>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">
+              <a href="mailto:nnogueira2@students.stonehill.edu">nnogueira2@students.stonehill.edu</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">
+              <a href="tel:15083618847">(508) 361-8847</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              <a href="https://www.linkedin.com/in/nick-nogueira/" target="_blank" rel="noopener">linkedin.com/in/nick-nogueira ↗</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">
+              <a href="https://github.com/Nicolas-Nogueira" target="_blank" rel="noopener">github.com/Nicolas-Nogueira ↗</a>
+            </span>
+          </div>
         </div>
-      </details>
-
-      <div class="project-buttons">
-        <a href="https://github.com/Nicolas-Nogueira/Predicting-premier-league-table-for-2024-2025" target="_blank" class="btn">View Repo</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Project 3: Premier League Data Visualization Dashboard -->
-    <div class="project-card">
-      <h3>Premier League 24/25 — Interactive Data Visualization Dashboard</h3>
-      <p>
-        A team-based final project for CSC 321: Data Visualization. Designed and implemented
-        an interactive dashboard using Vega-Lite to explore Premier League goal data across
-        teams, players, and matchweeks through a user-centered design process.
-      </p>
+  </main>
 
-      <div class="tags">
-        <span class="tag">Data Visualization</span>
-        <span class="tag">Vega-Lite</span>
-        <span class="tag">User-Centered Design</span>
-        <span class="tag">Sports Analytics</span>
-      </div>
-
-      <div class="project-buttons">
-        <a
-          href="https://stonehill-csc321.github.io/assets/PremierLeague/final_vega_lite.html"
-          target="_blank"
-          class="btn"
-        >
-          View Dashboard
-        </a>
-      </div>
-    </div>
-
-    <!--Project 4: BSU-Professors-Salary-vs-Professors-Rating-->
-    <div class="project-card">
-      <h3>BSU-Professors-Salary-vs-Professors-Rating</h3>
-      <p>Analysis of Bridgewater State University professor salaries vs Rate My Professors ratings. Includes R statistical analysis and interactive Vega-Lite dashboard. Confirms no meaningful relationship (r²=0.0055, p=0.328) between student ratings and compensation, validating institutional salary structures.</p>
-
-      <div class="tags">
-        <span class="tag">Data Visualization</span>
-        <span class="tag">Data Analytics</span>
-        <span class="tag">Vega-Lite</span>
-        <span class="tag">R</span>
-      </div>
-
-      <div class="project-buttons">
-        <a
-          href=https://github.com/Nicolas-Nogueira/BSU-Professors-Salary-vs-Professors-Rating
-          target="_blank"
-          class="btn">
-          View Repo
-        </a>
-
-      </div>
-    </div>
-      
-  </div>
-</section>
-
-<!-- Resume Section -->
-<section id="resume" class="reveal reveal-up">
-  <h2>Resume</h2>
-  <div class="resume-actions">
-    <a class="btn" href="images/HandShake_Nick_Nogueira_Resume (3).pdf" target="_blank" rel="noopener">Open PDF</a>
-    <a class="btn" href="images/HandShake_Nick_Nogueira_Resume (3).pdf" download>Download PDF</a>
-  </div>
-  <details class="resume-preview">
-    <summary>Preview resume on the page</summary>
-    <div class="resume-embed">
-      <object data="images/HandShake_Nick_Nogueira_Resume (3).pdf" type="application/pdf" width="100%" height="800">
-        <p>Your browser can't display PDFs inline. 
-          <a href="images/HandShake_Nick_Nogueira_Resume (3).pdf" target="_blank" rel="noopener">Open the PDF</a>.
-        </p>
-      </object>
-    </div>
-  </details>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="reveal reveal-up">
-  <h2>Contact</h2>
-  <div class="contact-info">
-    <p><strong>Email:</strong> <a href="mailto:nnogueira2@students.stonehill.edu">nnogueira2@students.stonehill.edu</a></p>
-    <p><strong>Phone:</strong> <a href="tel:15083618847">(508) 361-8847</a></p>
-    <p><strong>LinkedIn:</strong> 
-      <a href="https://www.linkedin.com/in/nick-nogueira/" target="_blank">
-        linkedin.com/in/nick-nogueira
-      </a>
-    </p>
-  </div>
-</section>
-
-
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
   <footer>
-    <p>Nick Nogueira| Hosted on GitHub Pages</p>
+    <p>© <span id="footer-year"></span> Nick Nogueira — Hosted on GitHub Pages</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!--
+    type="module" is required for ES module imports in script.js
+    (the import statements at the top of that file).
+    This works in all modern browsers and needs no build step.
+  -->
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>
